@@ -1,0 +1,6 @@
+package com.codewithbilawal.authenticatio_with_bloc
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
