@@ -1,8 +1,14 @@
+import 'package:authenticatio_with_bloc/res/app_routes.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'screens/auth/welcome_sreen.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -18,7 +24,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const WelcomeScreen(),
+      onGenerateRoute: AppRoutes.onGenratedRoute,
+      initialRoute: "/welcome_sreen",
     );
   }
 }

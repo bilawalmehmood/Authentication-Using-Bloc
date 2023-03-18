@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'bloc/auth_bloc.dart';
 import 'components/auth_button.dart';
-import 'sign_in_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -10,26 +7,32 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 20),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            const Text(
-              "Welcome Bloc",
-              style: TextStyle(fontSize: 30),
+            Expanded(
+              child: Container(
+                alignment: Alignment.center,
+                width: double.infinity,
+                child: const Text(
+                  "Welcome Bloc",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ),
             ),
             AuthButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (ctd) {
-                  return BlocProvider(
-                    create: (context) => AuthBloc(),
-                    child: SignInScreen(),
-                  );
-                }));
+                Navigator.pushNamed(context, "/sign_in_screen");
               },
               name: "Sign In With Email",
-            )
+            ),
+            const SizedBox(height: 20),
+            AuthButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, "/sign_in_with_phone_screen");
+                },
+                name: "Sign in with Phone")
           ],
         ),
       ),

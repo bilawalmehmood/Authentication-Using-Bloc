@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "675235989989",
+    "project_id": "phone-auth-with-bloc",
+    "storage_bucket": "phone-auth-with-bloc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675235989989:android:055e3d51d902ecd753470c",
+        "android_client_info": {
+          "package_name": "com.codewithbilawal.authenticatio_with_bloc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675235989989-b70vkl5ci42497fhvdsqvcfhnrlh4ta9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvBl8kzwx9dwFcFQLkcz0n70tnyqbZKK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675235989989-b70vkl5ci42497fhvdsqvcfhnrlh4ta9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
